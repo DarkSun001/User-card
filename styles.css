@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root{
+    --bg-color:  #FFE4C9 ;
+    --card-bg-color: #f8f7f5;
+    --card-br--color: #f1e7e7;
+    --font-family: 'Poppins', sans-serif;
+    --font-weight: 400;
+    --card-font-weight: 300;
+    --font-color:#3F3F44;
+    --button-bg-color: #FFBE98 ;
+
+}
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;  
+}
+
+body{
+    font-family: var(--font-family);
+    color: var(--font-color);
+    background-color: var(--bg-color);
+}
+
+.header{
+    text-align: center;
+}
+.welcome{
+    margin:1.7rem 0;
+    
+}
+.btn-container{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.btn{
+    background-color: #FFBE98;
+    color:var(--font-color);
+    cursor: pointer;
+    border:none;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 1rem 1.3rem;
+    display: inline;
+    text-align: center;
+    outline:none;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family:'Poppins', sans-serif;
+    font-weight: 300;
+    
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    background-color: #FF9E78;
+}
+
+
+.grid-container{
+    display:grid;
+    gap:1.30rem;
+    place-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    padding: 1.30rem;
+}
+
+.card{
+    background-color: var(--card-bg-color);
+    padding: 1.30rem;
+    border: 1px solid var(--card-br--color);
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align: center;
+    transition: transform 0.3s;
+    position:relative;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.delete-icon{
+    position:absolute;
+    top:15px;
+    right:20px;
+}
+.picture{
+    border-radius: 50%;
+    width:100px;
+    height:100px;
+    object-fit: cover;
+    margin:1rem 0;
+
+}
+
+
+
+.content{
+    margin:1.7rem 0;
+}
+
+.icons-container{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap:20px;
+    background-color: var(--button-bg-color);
+    border-radius: 15px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.icons-container i {
+    font-size: 1.5rem;
+    color:var(--font-color);
+    transition: transform 0.7s ease-in-out;
+    
+}
+
+.icons-container i:hover{
+    animation: spin 0.7s ease-in-out
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
